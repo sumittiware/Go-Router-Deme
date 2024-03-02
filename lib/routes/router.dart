@@ -4,10 +4,18 @@ import 'package:go_router_flutter/routes/page_config.dart';
 import 'package:go_router_flutter/screens/tabs_screen.dart';
 
 class CustomRouter {
-  final GlobalKey<NavigatorState> _rootNavigatorKey =
-      GlobalKey<NavigatorState>(debugLabel: 'root');
-  final GlobalKey<NavigatorState> _shellNavigatorKey =
-      GlobalKey<NavigatorState>(debugLabel: 'shell');
+  static final GlobalKey<NavigatorState> _rootNavigatorKey =
+      GlobalKey<NavigatorState>(
+    debugLabel: 'root',
+  );
+
+  static final GlobalKey<NavigatorState> _shellNavigatorKey =
+      GlobalKey<NavigatorState>(
+    debugLabel: 'shell',
+  );
+
+  static GlobalKey<NavigatorState> get rootNavigatorKey => _rootNavigatorKey;
+  static GlobalKey<NavigatorState> get shellNavigatorKey => _shellNavigatorKey;
 
   GoRouter getAppRoutes() {
     return GoRouter(

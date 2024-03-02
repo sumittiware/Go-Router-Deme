@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:go_router_flutter/routes/page_config.dart';
+import 'package:go_router_flutter/routes/router.dart';
 
 class WalletScreen extends StatefulWidget {
   const WalletScreen({super.key});
@@ -19,7 +20,9 @@ class _WalletScreenState extends State<WalletScreen> {
           children: [
             ElevatedButton(
               onPressed: () {
-                context.pushNamed(transactionPageConfig.name);
+                CustomRouter.rootNavigatorKey.currentContext?.pushNamed(
+                  transactionPageConfig.name,
+                );
               },
               child: const Text("View Transactions"),
             ),

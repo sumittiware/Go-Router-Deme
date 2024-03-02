@@ -79,17 +79,4 @@ class _SettingsScreenState extends State<SettingsScreen>
       ),
     );
   }
-
-  Widget _buildBody(int index) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text('Tab number $index'),
-        const SizedBox(
-          height: 8,
-        ),
-        ElevatedButton(onPressed: () {}, child: const Text('Detail'))
-      ],
-    );
-  }
 }
